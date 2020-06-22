@@ -152,6 +152,7 @@ export default {
       const { data: res } = await this.$http.get("categories");
       if (res.meta.status !== 200) return this.$message.error(res.meta.msg);
       this.cateList = res.data;
+      console.log(this.cateList);
     },
     handleChange() {
       if (this.addForm.goods_cat.length !== 3) this.addForm.goods_cat = [];
